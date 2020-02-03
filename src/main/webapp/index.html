@@ -66,7 +66,7 @@
 
 <script>
     $.ajax({
-        url: '/api/weather',
+        url: './api/weather',
         type: 'GET',
         success: function(data) {
             //$('#chat-window-main').html(data);
@@ -83,11 +83,11 @@
         event.preventDefault();
         var lang = event.target.id;
         $.ajax({
-            url: '/api/country/'+lang,
+            url: './api/country/'+lang,
             type: 'PUT',
             success: function(data) {
                 $.ajax({
-                    url: '/api/weather',
+                    url: './api/weather',
                     type: 'GET',
                     success: function(data) {
                         $("#city-list").empty();
